@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    font-family: Gotham,Arial,sans-serif;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3d3b3c;
+}
+
+nav{
+    background-color: #000103;
+    height: 80px;
+    width: 100%;
+}
+
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo{
+    height: 40px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    background-color: blanchedalmond;
+    text-decoration: none;
+}
+
+li a.active, li a:hover{
+    transition: 0.5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+h1{
+    margin-left: 37%;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section h1 {
+    width: 100%;
+}
+
+
+.estilo-c .img-container{
+    overflow: hidden;
+    height: 350px;
+    position: relative;
+    border-radius: 15px;
+    top: 10%;
+}
+.estilo-c .img-container img{
+    position: absolute;
+    transition: all 0.5s;
+    margin-left: 25%;
+}
+.estilo-c:hover .img-container img{
+    transform: scale(0.8);
+}
+.estilo-c .img-container .promo{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+    background: yellow;
+    padding: 15px;
+    color: black;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.estilo-c .info-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+.estilo-c .info-container h3{
+    margin: 0;
+}
+.estilo-c .info-container h3,
+.estilo-c .info-container strong,
+.estilo-c .info-container span{
+    padding: 5px 15px;
+    width: 100%;
+}
+.estilo-c .add-cart{
+    margin-top: 2px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+.estilo-c .add-cart:hover{
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.estilo-c .info{
+    margin-top: 2px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.estilo-c .info:hover{
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    margin-left: 450px;
+    margin-bottom: 75px;
+}
+
+.grid-container div {
+    color: black;
+}
+
+.estilo-c .item-button{
+    margin-top: 2px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.estilo-c .item-button:hover{
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.shopping-cart-total .btn {
+    margin-top: 2px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.shopping-cart-total .btn:hover {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.pagina-informacion{
+    text-align: center;
+}
+
+.ropa-informacion{
+    margin-left: 40px;
+}

@@ -1,0 +1,72 @@
+body {
+    background-image: url(https://previews.123rf.com/images/sergwsq/sergwsq1203/sergwsq120300006/12486245-graffiti-pared-del-fondo-las-calles-urbanas-grunge-diseño-de-vectores.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 95vh;
+    margin: 0;
+    font-family: monospace;
+}
+
+form {
+    width: 450px;
+    margin: auto;
+    background: #262626;
+    padding: 35px 30px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#titulo {
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.pagos {
+    background-color: rgba(133, 141, 149, 0.598);
+    border: none;
+    padding: 6px;
+    margin-bottom: 15px;
+    width: 40%;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: none;
+    background-color: rgba(133, 141, 149, 0.598);
+}
+
+textarea {
+    max-height: 70px;
+    max-width: 100%;
+}
+
+.boton {
+    background: rgba(133, 141, 149, 0.59);
+    border: none;
+    padding: 10px;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    form{
+        width: 100%;
+    }
+}
+
+.subtitulo {
+    font-size: 21px;
+    margin-bottom: 15px;
+    color: aliceblue;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/estilos/estilos.css">
+    <link rel="stylesheet" href="/estilos/estilosForm.css">
+
+    <title>Formulario de contacto</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="/inicio" class="enlace">
+            <img src="https://i.pinimg.com/736x/7a/2b/2c/7a2b2cc69ced444f3d827d405ac4dcf7--logos-examples-fringe.jpg" alt="logo1" class="logo">
+        </a>
+        <ul>
+            <li>
+                <a href="/inicio">Productos</a>
+                <a href="#carrito">Carrito de compras</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="todo">
+        <form id="form_insert">
+            <div>
+                <h1 id="titulo" class="subtitulo">DATOS DE PAGO</h1>
+
+                <label class="subtitulo">Nombre Completo: (*)</label>
+                <input id="nombre" name="nombre" type="text" placeholder="Nombre" required>
+                <br>
+
+                <label class="subtitulo">Apellidos: (*)</label>
+                <input id="apellido" name="apellido" type="text" placeholder="Apellido" required>
+                <br>
+
+                <label class="subtitulo">Edad:</label>
+                <input id="edad" name="edad" type="number" placeholder="Edad">
+                <br>
+            </div>
+
+            <div>
+                <label class="subtitulo">Correo electrónico: (*)</label>
+                <input id="email" name="email" type="email" placeholder="Correo" required>
+                <br>
+
+                <label class="subtitulo">Elija el metodo de pago:</label>
+                <br>
+                <select class="pagos">
+                    <option value="true">Visa</option>
+                    <option value="false">Mastercard</option>
+                </select>
+                <br>
+                <select class="pagos">
+                    <option value="true">Tarjeta de crédito</option>
+                    <option value="false">Tarjeta de débito</option>
+                </select>
+                <br>
+
+                <label class="subtitulo">Número de tarjeta:</label>
+                <input id="tarjeta" name="telefono" type="number" placeholder="Número de tarjeta">
+                <br>
+
+                <label class="subtitulo">Fecha de caducidad: (*)</label>
+                <input id="caducidad" name="nacimiento" type="date" required>
+
+                <label class="subtitulo">Código de seguridad:</label>
+                <input id="seguridad" name="codigo" type="number" placeholder="XXXX" maxlength="4">
+            </div>
+            <div>
+                <legend class="subtitulo">Mensaje, consulta o sugerencia (*)</legend>
+                <textarea id="mensaje" name="mensaje" cols="30" rows="6" placeholder="Escribenos aquí tu comentario" required></textarea>
+            </div>
+            <button class="boton" id="btn_insert" name="enviar" value="presionar">Enviar datos</button>
+            <button class="boton" type="reset">Limpiar campos</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // insertar
+            $("#btn_insert").click(function(e){
+                e.preventDefault();
+                // el serialize llama todos los datos sin tener que escribir 1 por 1
+                var datos = $("#form_insert").serialize();
+                $.ajax({
+                    url: "/pago",
+                    method: "POST",
+                    data: datos,
+                    success: function(respuesta){
+                        console.log(respuesta);
+                    },
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
